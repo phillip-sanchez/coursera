@@ -6,9 +6,10 @@
 // the "speak" method and which you will expose to the global context
 // See Lecture 52, part 1
 // var helloSpeaker =
-(function (window) {
+(function(window) {
   var speakWord = "Hello";
-  var helloSpeaker = function(name){
+  var helloSpeaker = {};
+  helloSpeaker.speak = function(name){
     console.log(speakWord + " " + name);
   }
   window.helloSpeaker = helloSpeaker;
